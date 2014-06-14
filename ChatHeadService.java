@@ -15,7 +15,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
-
+/**
+ * Sample Floating Activity
+ *
+ * @author Abraham.K <abrahamrkj@gmail.com>
+ * @website abrahamk.in
+ * @license MIT/X11
+ */
 public class ChatHeadService extends Service {
 
 	private WindowManager windowManager;

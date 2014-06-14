@@ -4,12 +4,17 @@ import org.apache.cordova.api.*;
 import org.apache.cordova.example.ChatHeadService;
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-
+/**
+ * Plugin to launch Services, Activity as Seperate Thread
+ *
+ * @author Abraham.K <abrahamrkj@gmail.com>
+ * @website abrahamk.in
+ * @license MIT/X11
+ */
 public class FloatingActivityPlugin extends CordovaPlugin {
 	FloatingActivityPlugin _theApp;
 	ComponentName _checkerService;
