@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.phonegap.plugins.floatingactivityplugin"
+      version="0.1.0">
+    <name>FloatingActivityPlugin</name>
+    <description>Float window plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,cordova,float,system-window</keywords>
+
+
+    <js-module src="www/FloatingActivityPlugin.js" name="FloatingActivityPlugin">
+        <clobbers target="window.FloatingActivityPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FloatingActivityPlugin">
+                <param name="android-package" value="com.phonegap.plugins.floatingactivityplugin.FloatingActivityPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>            
+        </config-file>
+ 
+        <source-file src="src/android/FloatingActivityPlugin.java" target-dir="src/com/phonegap/plugins/floatingactivityplugin" />
+     </platform>
+</plugin>
